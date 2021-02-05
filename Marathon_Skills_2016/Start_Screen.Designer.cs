@@ -155,7 +155,7 @@
             // 
             this.userControl11.Location = new System.Drawing.Point(1, 737);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(1433, 62);
+            this.userControl11.Size = new System.Drawing.Size(1433, 69);
             this.userControl11.TabIndex = 13;
             this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
             // 

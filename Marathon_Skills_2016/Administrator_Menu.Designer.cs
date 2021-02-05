@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel_back_gorund_down = new System.Windows.Forms.Panel();
-            this.count_date = new System.Windows.Forms.Label();
             this.menu_administratora = new System.Windows.Forms.Label();
             this.marathon_skills_2021 = new System.Windows.Forms.Label();
             this.btn_cansel = new System.Windows.Forms.Button();
@@ -40,33 +38,12 @@
             this.table_btn = new System.Windows.Forms.TableLayoutPanel();
             this.btn_sponsor = new System.Windows.Forms.Button();
             this.btn_edit_profile = new System.Windows.Forms.Button();
-            this.panel_back_gorund_down.SuspendLayout();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.userControl11 = new Marathon_Skills_2016.UserControl1();
             this.panel1.SuspendLayout();
             this.table_btn.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel_back_gorund_down
-            // 
-            this.panel_back_gorund_down.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_back_gorund_down.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.panel_back_gorund_down.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel_back_gorund_down.Controls.Add(this.count_date);
-            this.panel_back_gorund_down.Location = new System.Drawing.Point(0, 744);
-            this.panel_back_gorund_down.Name = "panel_back_gorund_down";
-            this.panel_back_gorund_down.Size = new System.Drawing.Size(1433, 60);
-            this.panel_back_gorund_down.TabIndex = 71;
-            // 
-            // count_date
-            // 
-            this.count_date.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.count_date.ForeColor = System.Drawing.SystemColors.Control;
-            this.count_date.Location = new System.Drawing.Point(0, 18);
-            this.count_date.Name = "count_date";
-            this.count_date.Size = new System.Drawing.Size(1433, 27);
-            this.count_date.TabIndex = 14;
-            this.count_date.Text = "18 дней 8 часов и 17 минут до старта марафона!";
-            this.count_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // menu_administratora
             // 
@@ -191,13 +168,34 @@
             this.btn_edit_profile.Text = "Благотворительные организации";
             this.btn_edit_profile.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.userControl11, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 733);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1432, 70);
+            this.tableLayoutPanel1.TabIndex = 73;
+            // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(3, 3);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(1426, 64);
+            this.userControl11.TabIndex = 0;
+            this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
+            // 
             // Administrator_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1432, 803);
-            this.Controls.Add(this.panel_back_gorund_down);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menu_administratora);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.table_btn);
@@ -206,18 +204,16 @@
             this.Name = "Administrator_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marathon Skills 2021 - Administrator menu";
-            this.panel_back_gorund_down.ResumeLayout(false);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Administrator_Menu_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.table_btn.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel_back_gorund_down;
-        private System.Windows.Forms.Label count_date;
         private System.Windows.Forms.Label menu_administratora;
         private System.Windows.Forms.Label marathon_skills_2021;
         private System.Windows.Forms.Button btn_cansel;
@@ -228,5 +224,7 @@
         private System.Windows.Forms.TableLayoutPanel table_btn;
         private System.Windows.Forms.Button btn_sponsor;
         private System.Windows.Forms.Button btn_edit_profile;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private UserControl1 userControl11;
     }
 }

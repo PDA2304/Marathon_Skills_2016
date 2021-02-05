@@ -28,46 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel_back_gorund_down = new System.Windows.Forms.Panel();
-            this.count_date = new System.Windows.Forms.Label();
             this.menu_runner = new System.Windows.Forms.Label();
             this.marathon_skills_2021 = new System.Windows.Forms.Label();
             this.btn_cansel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.btn_rigistration_marathon = new System.Windows.Forms.Button();
             this.btn_results = new System.Windows.Forms.Button();
             this.table_btn = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_edit_profile = new System.Windows.Forms.Button();
             this.btn_sponsor = new System.Windows.Forms.Button();
-            this.btn_logout = new System.Windows.Forms.Button();
+            this.btn_edit_profile = new System.Windows.Forms.Button();
             this.btn_contact = new System.Windows.Forms.Button();
-            this.panel_back_gorund_down.SuspendLayout();
+            this.userControl11 = new Marathon_Skills_2016.UserControl1();
             this.panel1.SuspendLayout();
             this.table_btn.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel_back_gorund_down
-            // 
-            this.panel_back_gorund_down.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_back_gorund_down.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.panel_back_gorund_down.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel_back_gorund_down.Controls.Add(this.count_date);
-            this.panel_back_gorund_down.Location = new System.Drawing.Point(0, 744);
-            this.panel_back_gorund_down.Name = "panel_back_gorund_down";
-            this.panel_back_gorund_down.Size = new System.Drawing.Size(1433, 60);
-            this.panel_back_gorund_down.TabIndex = 67;
-            // 
-            // count_date
-            // 
-            this.count_date.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.count_date.ForeColor = System.Drawing.SystemColors.Control;
-            this.count_date.Location = new System.Drawing.Point(0, 18);
-            this.count_date.Name = "count_date";
-            this.count_date.Size = new System.Drawing.Size(1433, 27);
-            this.count_date.TabIndex = 14;
-            this.count_date.Text = "18 дней 8 часов и 17 минут до старта марафона!";
-            this.count_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // menu_runner
             // 
@@ -114,6 +89,18 @@
             this.panel1.Size = new System.Drawing.Size(1433, 79);
             this.panel1.TabIndex = 65;
             // 
+            // btn_logout
+            // 
+            this.btn_logout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_logout.Font = new System.Drawing.Font("Arial", 14F);
+            this.btn_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btn_logout.Location = new System.Drawing.Point(1330, 20);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(90, 40);
+            this.btn_logout.TabIndex = 69;
+            this.btn_logout.Text = "logout";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            // 
             // btn_rigistration_marathon
             // 
             this.btn_rigistration_marathon.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -158,53 +145,51 @@
             this.table_btn.Size = new System.Drawing.Size(702, 357);
             this.table_btn.TabIndex = 68;
             // 
-            // btn_edit_profile
-            // 
-            this.btn_edit_profile.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_edit_profile.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn_edit_profile.ForeColor = System.Drawing.Color.Black;
-            this.btn_edit_profile.Location = new System.Drawing.Point(3, 121);
-            this.btn_edit_profile.Name = "btn_edit_profile";
-            this.btn_edit_profile.Size = new System.Drawing.Size(330, 100);
-            this.btn_edit_profile.TabIndex = 69;
-            this.btn_edit_profile.Text = "Редактирование профиля";
-            this.btn_edit_profile.UseVisualStyleBackColor = true;
-            // 
             // btn_sponsor
             // 
             this.btn_sponsor.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_sponsor.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_sponsor.ForeColor = System.Drawing.Color.Black;
-            this.btn_sponsor.Location = new System.Drawing.Point(354, 121);
+            this.btn_sponsor.Location = new System.Drawing.Point(354, 122);
             this.btn_sponsor.Name = "btn_sponsor";
             this.btn_sponsor.Size = new System.Drawing.Size(330, 100);
             this.btn_sponsor.TabIndex = 69;
             this.btn_sponsor.Text = "Мой спонсор";
             this.btn_sponsor.UseVisualStyleBackColor = true;
             // 
-            // btn_logout
+            // btn_edit_profile
             // 
-            this.btn_logout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_logout.Font = new System.Drawing.Font("Arial", 14F);
-            this.btn_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_logout.Location = new System.Drawing.Point(1330, 20);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(90, 40);
-            this.btn_logout.TabIndex = 69;
-            this.btn_logout.Text = "logout";
-            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_edit_profile.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_edit_profile.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_edit_profile.ForeColor = System.Drawing.Color.Black;
+            this.btn_edit_profile.Location = new System.Drawing.Point(3, 122);
+            this.btn_edit_profile.Name = "btn_edit_profile";
+            this.btn_edit_profile.Size = new System.Drawing.Size(330, 100);
+            this.btn_edit_profile.TabIndex = 69;
+            this.btn_edit_profile.Text = "Редактирование профиля";
+            this.btn_edit_profile.UseVisualStyleBackColor = true;
             // 
             // btn_contact
             // 
             this.btn_contact.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_contact.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_contact.ForeColor = System.Drawing.Color.Black;
-            this.btn_contact.Location = new System.Drawing.Point(3, 239);
+            this.btn_contact.Location = new System.Drawing.Point(3, 241);
             this.btn_contact.Name = "btn_contact";
             this.btn_contact.Size = new System.Drawing.Size(330, 100);
             this.btn_contact.TabIndex = 61;
             this.btn_contact.Text = "Контакты";
             this.btn_contact.UseVisualStyleBackColor = true;
+            this.btn_contact.Click += new System.EventHandler(this.btn_contact_Click);
+            // 
+            // userControl11
+            // 
+            this.userControl11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.userControl11.Location = new System.Drawing.Point(0, 729);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(1432, 74);
+            this.userControl11.TabIndex = 69;
+            this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
             // 
             // Runner_Menu
             // 
@@ -212,7 +197,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1432, 803);
-            this.Controls.Add(this.panel_back_gorund_down);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.menu_runner);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.table_btn);
@@ -221,7 +206,6 @@
             this.Name = "Runner_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marathon Skills 2021 - Runner menu";
-            this.panel_back_gorund_down.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.table_btn.ResumeLayout(false);
@@ -230,9 +214,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel_back_gorund_down;
-        private System.Windows.Forms.Label count_date;
         private System.Windows.Forms.Label menu_runner;
         private System.Windows.Forms.Label marathon_skills_2021;
         private System.Windows.Forms.Button btn_cansel;
@@ -244,5 +225,6 @@
         private System.Windows.Forms.Button btn_sponsor;
         private System.Windows.Forms.Button btn_edit_profile;
         private System.Windows.Forms.Button btn_contact;
+        private UserControl1 userControl11;
     }
 }

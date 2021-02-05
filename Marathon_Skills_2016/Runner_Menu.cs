@@ -16,5 +16,16 @@ namespace Marathon_Skills_2016
         {
             InitializeComponent();
         }
+
+        private void userControl11_Load(object sender, EventArgs e)
+        {
+            userControl11.timer1.Start();
+        }
+
+        private void btn_contact_Click(object sender, EventArgs e)
+        {
+            var form = new Runner_menu_kontakt_dialog();
+            form.ShowDialog();
+        }
     }
 }

@@ -39,12 +39,12 @@
             // 
             this.count_date.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.count_date.ForeColor = System.Drawing.SystemColors.Control;
-            this.count_date.Location = new System.Drawing.Point(0, 0);
+            this.count_date.Location = new System.Drawing.Point(0, 20);
             this.count_date.Name = "count_date";
-            this.count_date.Size = new System.Drawing.Size(1433, 60);
+            this.count_date.Size = new System.Drawing.Size(1433, 54);
             this.count_date.TabIndex = 14;
             this.count_date.Text = "18 дней 8 часов и 17 минут до старта марафона!";
-            this.count_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.count_date.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel_back_gorund_down
             // 
@@ -55,7 +55,7 @@
             this.panel_back_gorund_down.Controls.Add(this.count_date);
             this.panel_back_gorund_down.Location = new System.Drawing.Point(0, 0);
             this.panel_back_gorund_down.Name = "panel_back_gorund_down";
-            this.panel_back_gorund_down.Size = new System.Drawing.Size(1769, 60);
+            this.panel_back_gorund_down.Size = new System.Drawing.Size(1769, 74);
             this.panel_back_gorund_down.TabIndex = 76;
             // 
             // timer1
@@ -69,7 +69,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel_back_gorund_down);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(1433, 60);
+            this.Size = new System.Drawing.Size(1433, 74);
             this.panel_back_gorund_down.ResumeLayout(false);
             this.ResumeLayout(false);
 

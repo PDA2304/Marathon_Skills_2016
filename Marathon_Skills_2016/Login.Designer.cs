@@ -32,8 +32,6 @@
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_login = new System.Windows.Forms.Button();
             this.tb_password = new System.Windows.Forms.TextBox();
-            this.panel_back_gorund_down = new System.Windows.Forms.Panel();
-            this.count_date = new System.Windows.Forms.Label();
             this.marathon_skills_2021 = new System.Windows.Forms.Label();
             this.tb_email = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.Label();
@@ -43,7 +41,7 @@
             this.btn_cansel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.date_count = new System.Windows.Forms.Timer(this.components);
-            this.panel_back_gorund_down.SuspendLayout();
+            this.userControl11 = new Marathon_Skills_2016.UserControl1();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,29 +78,6 @@
             this.tb_password.Name = "tb_password";
             this.tb_password.Size = new System.Drawing.Size(307, 34);
             this.tb_password.TabIndex = 76;
-            // 
-            // panel_back_gorund_down
-            // 
-            this.panel_back_gorund_down.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_back_gorund_down.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.panel_back_gorund_down.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel_back_gorund_down.Controls.Add(this.count_date);
-            this.panel_back_gorund_down.Location = new System.Drawing.Point(0, 744);
-            this.panel_back_gorund_down.Name = "panel_back_gorund_down";
-            this.panel_back_gorund_down.Size = new System.Drawing.Size(1433, 60);
-            this.panel_back_gorund_down.TabIndex = 75;
-            // 
-            // count_date
-            // 
-            this.count_date.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.count_date.ForeColor = System.Drawing.SystemColors.Control;
-            this.count_date.Location = new System.Drawing.Point(0, 18);
-            this.count_date.Name = "count_date";
-            this.count_date.Size = new System.Drawing.Size(1433, 27);
-            this.count_date.TabIndex = 14;
-            this.count_date.Text = "18 дней 8 часов и 17 минут до старта марафона!";
-            this.count_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // marathon_skills_2021
             // 
@@ -177,7 +152,7 @@
             this.btn_cansel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btn_cansel.Location = new System.Drawing.Point(20, 20);
             this.btn_cansel.Name = "btn_cansel";
-            this.btn_cansel.Size = new System.Drawing.Size(90, 40);
+            this.btn_cansel.Size = new System.Drawing.Size(100, 40);
             this.btn_cansel.TabIndex = 1;
             this.btn_cansel.Text = "Назад";
             this.btn_cansel.UseVisualStyleBackColor = true;
@@ -196,7 +171,16 @@
             // date_count
             // 
             this.date_count.Interval = 1;
-            this.date_count.Tick += new System.EventHandler(this.date_count_Tick);
+            // 
+            // userControl11
+            // 
+            this.userControl11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControl11.Location = new System.Drawing.Point(0, 726);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(1433, 74);
+            this.userControl11.TabIndex = 91;
+            this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
             // 
             // Login
             // 
@@ -205,10 +189,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(1432, 803);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.tb_password);
-            this.Controls.Add(this.panel_back_gorund_down);
             this.Controls.Add(this.tb_email);
             this.Controls.Add(this.password);
             this.Controls.Add(this.email);
@@ -223,8 +207,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marathon Skills 2021 - Login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
-            this.Load += new System.EventHandler(this.Login_Load);
-            this.panel_back_gorund_down.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -237,8 +219,6 @@
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.TextBox tb_password;
-        private System.Windows.Forms.Panel panel_back_gorund_down;
-        private System.Windows.Forms.Label count_date;
         private System.Windows.Forms.Label marathon_skills_2021;
         private System.Windows.Forms.TextBox tb_email;
         private System.Windows.Forms.Label password;
@@ -248,5 +228,6 @@
         private System.Windows.Forms.Button btn_cansel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer date_count;
+        private UserControl1 userControl11;
     }
 }

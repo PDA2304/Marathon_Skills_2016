@@ -51,9 +51,6 @@ namespace Marathon_Skills_2016
                         
                 //    }
                 }
-                var form = new Administrator_Menu();
-                form.Show();
-                this.Close();
 
             }
             catch (Exception Error)
@@ -64,6 +61,9 @@ namespace Marathon_Skills_2016
             {
                 conect.Close();
             }
+                var form = new Administrator_Menu();
+                form.Show();
+                this.Hide();
 
         }
 
@@ -79,14 +79,10 @@ namespace Marathon_Skills_2016
             this.Hide();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+
+        private void userControl11_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void date_count_Tick(object sender, EventArgs e)
-        {
-
+            userControl11.timer1.Start();
         }
     }
 }
