@@ -34,22 +34,24 @@ namespace Marathon_Skills_2016
 
                 if (tb_password.Text == row[1].ToString())
                 {
-                //    if(row[2].ToString() == "R")
-                //    {
-                //        var form = new Runner_Menu();
-                //        form.Show();
-                //        this.Close();
-                //    }
-                //    if (row[2].ToString() == "A")
-                //    {
-                //        var form = new Coordinator_Menu();
-                //        form.Show();
-                //        this.Close();
-                //    }
-                //    if (row[2].ToString() == "C")
-                //    {
-                        
-                //    }
+                    if (row[2].ToString() == "R")
+                    {
+                        var form = new Runner_Menu();
+                        form.Show();
+                        this.Close();
+                    }
+                    if (row[2].ToString() == "A")
+                    {
+                        var form = new Coordinator_Menu();
+                        form.Show();
+                        this.Close();
+                    }
+                    if (row[2].ToString() == "C")
+                    {
+                        var form = new Administrator_Menu();
+                        form.Show();
+                        this.Hide();
+                    }
                 }
 
             }
@@ -61,10 +63,6 @@ namespace Marathon_Skills_2016
             {
                 conect.Close();
             }
-                var form = new Administrator_Menu();
-                form.Show();
-                this.Hide();
-
         }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)

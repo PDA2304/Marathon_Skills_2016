@@ -77,6 +77,7 @@
             this.btn_cansel.TabIndex = 1;
             this.btn_cansel.Text = "Назад";
             this.btn_cansel.UseVisualStyleBackColor = true;
+            this.btn_cansel.Click += new System.EventHandler(this.btn_cansel_Click);
             // 
             // panel1
             // 
@@ -206,6 +207,7 @@
             this.Name = "Runner_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marathon Skills 2021 - Runner menu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Runner_Menu_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.table_btn.ResumeLayout(false);

@@ -27,5 +27,17 @@ namespace Marathon_Skills_2016
             var form = new Runner_menu_kontakt_dialog();
             form.ShowDialog();
         }
+
+        private void Runner_Menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_cansel_Click(object sender, EventArgs e)
+        {
+            var form = new start_screen();
+            Hide();
+            form.Show();
+        }
     }
 }

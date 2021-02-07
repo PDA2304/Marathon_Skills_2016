@@ -64,7 +64,6 @@
     <Compile Include="Find_Out_More_Information.Designer.cs">
       <DependentUpon>Find_Out_More_Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="Function.cs" />
     <Compile Include="List_Of_Charities.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +89,12 @@
     </Compile>
     <Compile Include="Register_as_a_runner.Designer.cs">
       <DependentUpon>Register_as_a_runner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register_for_an_event.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register_for_an_event.Designer.cs">
+      <DependentUpon>Register_for_an_event.cs</DependentUpon>
     </Compile>
     <Compile Include="Rigister_as_runner.cs">
       <SubType>Form</SubType>
@@ -213,6 +218,7 @@
     <Content Include="Properties\img\charity_data\the-red-cross-logo.png" />
     <Content Include="Properties\img\charity_data\upbeat-logo.png" />
     <Content Include="Properties\img\charity_data\wwsm-rescue-logo.png" />
+    <None Include="Resources\unnamed.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

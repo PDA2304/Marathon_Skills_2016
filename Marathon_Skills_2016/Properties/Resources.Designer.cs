@@ -61,6 +61,24 @@ namespace Marathon_Skills_2016.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Data Source=DESKTOP-1CRVPTK\ISIP_D_A_PAHOMOV;Initial Catalog=MarathonSkills2016;Integrated Security=True.
+        /// </summary>
+        internal static string connection {
+            get {
+                return ResourceManager.GetString("connection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на select * from Country.
+        /// </summary>
+        internal static string sql_country {
+            get {
+                return ResourceManager.GetString("sql_country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на SELECT        TOP (100) PERCENT dbo.Role.RoleId, CONCAT(dbo.[User].FirstName, &apos; &apos;, dbo.[User].LastName, &apos; - &apos;, dbo.RegistrationEvent.BibNumber, &apos; (&apos;, dbo.Country.CountryCode, &apos;)&apos;) AS Expr1, dbo.Charity.CharityName, 
         ///                         dbo.Charity.CharityLogo, dbo.Charity.CharityDescription
         ///FROM            dbo.Country INNER JOIN
@@ -70,6 +88,16 @@ namespace Marathon_Skills_2016.Properties {
         internal static string sql_select_Runner_Sponsor {
             get {
                 return ResourceManager.GetString("sql_select_Runner_Sponsor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unnamed {
+            get {
+                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

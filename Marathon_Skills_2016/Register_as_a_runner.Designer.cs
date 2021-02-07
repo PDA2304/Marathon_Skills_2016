@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel_back_gorund_down = new System.Windows.Forms.Panel();
-            this.count_date = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register_as_a_runner));
             this.tx_password2 = new System.Windows.Forms.TextBox();
             this.tb_email = new System.Windows.Forms.TextBox();
             this.last = new System.Windows.Forms.Label();
@@ -51,41 +50,19 @@
             this.tb_path_img = new System.Windows.Forms.TextBox();
             this.img_text = new System.Windows.Forms.Label();
             this.btn_fail = new System.Windows.Forms.Button();
-            this.tb_date = new System.Windows.Forms.TextBox();
             this.date = new System.Windows.Forms.Label();
             this.tb_country = new System.Windows.Forms.ComboBox();
             this.country = new System.Windows.Forms.Label();
             this.icon = new System.Windows.Forms.PictureBox();
             this.btn_registration = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
-            this.panel_back_gorund_down.SuspendLayout();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.tb_date = new System.Windows.Forms.DateTimePicker();
+            this.userControl11 = new Marathon_Skills_2016.UserControl1();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_runner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel_back_gorund_down
-            // 
-            this.panel_back_gorund_down.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_back_gorund_down.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.panel_back_gorund_down.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel_back_gorund_down.Controls.Add(this.count_date);
-            this.panel_back_gorund_down.Location = new System.Drawing.Point(0, 744);
-            this.panel_back_gorund_down.Name = "panel_back_gorund_down";
-            this.panel_back_gorund_down.Size = new System.Drawing.Size(1433, 60);
-            this.panel_back_gorund_down.TabIndex = 48;
-            // 
-            // count_date
-            // 
-            this.count_date.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.count_date.ForeColor = System.Drawing.SystemColors.Control;
-            this.count_date.Location = new System.Drawing.Point(0, 18);
-            this.count_date.Name = "count_date";
-            this.count_date.Size = new System.Drawing.Size(1433, 27);
-            this.count_date.TabIndex = 14;
-            this.count_date.Text = "18 дней 8 часов и 17 минут до старта марафона!";
-            this.count_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tx_password2
             // 
@@ -104,6 +81,7 @@
             this.tb_email.Name = "tb_email";
             this.tb_email.Size = new System.Drawing.Size(397, 34);
             this.tb_email.TabIndex = 41;
+            this.tb_email.Leave += new System.EventHandler(this.tb_email_Leave);
             // 
             // last
             // 
@@ -216,6 +194,7 @@
             this.btn_cansel.TabIndex = 1;
             this.btn_cansel.Text = "Назад";
             this.btn_cansel.UseVisualStyleBackColor = true;
+            this.btn_cansel.Click += new System.EventHandler(this.btn_cansel_Click);
             // 
             // panel1
             // 
@@ -244,6 +223,9 @@
             this.tb_name.Name = "tb_name";
             this.tb_name.Size = new System.Drawing.Size(334, 34);
             this.tb_name.TabIndex = 50;
+            this.tb_name.TextChanged += new System.EventHandler(this.tb_name_TextChanged);
+            this.tb_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_name_KeyPress);
+            this.tb_name.Leave += new System.EventHandler(this.tb_name_Leave);
             // 
             // tb_last
             // 
@@ -253,12 +235,17 @@
             this.tb_last.Name = "tb_last";
             this.tb_last.Size = new System.Drawing.Size(334, 34);
             this.tb_last.TabIndex = 51;
+            this.tb_last.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_name_KeyPress);
+            this.tb_last.Leave += new System.EventHandler(this.tb_name_Leave);
             // 
             // cb_sex
             // 
             this.cb_sex.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_sex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.cb_sex.FormattingEnabled = true;
+            this.cb_sex.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
             this.cb_sex.Location = new System.Drawing.Point(320, 565);
             this.cb_sex.Name = "cb_sex";
             this.cb_sex.Size = new System.Drawing.Size(234, 34);
@@ -266,9 +253,11 @@
             // 
             // img_runner
             // 
+            this.img_runner.Image = ((System.Drawing.Image)(resources.GetObject("img_runner.Image")));
             this.img_runner.Location = new System.Drawing.Point(1172, 284);
             this.img_runner.Name = "img_runner";
             this.img_runner.Size = new System.Drawing.Size(201, 209);
+            this.img_runner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_runner.TabIndex = 53;
             this.img_runner.TabStop = false;
             // 
@@ -278,6 +267,7 @@
             this.tb_path_img.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.tb_path_img.Location = new System.Drawing.Point(838, 513);
             this.tb_path_img.Name = "tb_path_img";
+            this.tb_path_img.ReadOnly = true;
             this.tb_path_img.Size = new System.Drawing.Size(318, 34);
             this.tb_path_img.TabIndex = 55;
             // 
@@ -303,15 +293,7 @@
             this.btn_fail.TabIndex = 56;
             this.btn_fail.Text = "Просмотр...";
             this.btn_fail.UseVisualStyleBackColor = true;
-            // 
-            // tb_date
-            // 
-            this.tb_date.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tb_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.tb_date.Location = new System.Drawing.Point(1080, 569);
-            this.tb_date.Name = "tb_date";
-            this.tb_date.Size = new System.Drawing.Size(250, 34);
-            this.tb_date.TabIndex = 58;
+            this.btn_fail.Click += new System.EventHandler(this.btn_fail_Click);
             // 
             // date
             // 
@@ -347,9 +329,11 @@
             // 
             // icon
             // 
+            this.icon.Image = ((System.Drawing.Image)(resources.GetObject("icon.Image")));
             this.icon.Location = new System.Drawing.Point(1336, 565);
             this.icon.Name = "icon";
             this.icon.Size = new System.Drawing.Size(37, 41);
+            this.icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.icon.TabIndex = 61;
             this.icon.TabStop = false;
             // 
@@ -358,26 +342,50 @@
             this.btn_registration.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_registration.Font = new System.Drawing.Font("Arial", 14F);
             this.btn_registration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_registration.Location = new System.Drawing.Point(625, 679);
+            this.btn_registration.Location = new System.Drawing.Point(544, 648);
             this.btn_registration.Name = "btn_registration";
             this.btn_registration.Size = new System.Drawing.Size(205, 40);
             this.btn_registration.TabIndex = 62;
             this.btn_registration.Text = "Регистрация";
             this.btn_registration.UseVisualStyleBackColor = true;
+            this.btn_registration.Click += new System.EventHandler(this.btn_registration_Click);
             // 
             // btn_back
             // 
             this.btn_back.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_back.Font = new System.Drawing.Font("Arial", 14F);
             this.btn_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_back.Location = new System.Drawing.Point(850, 679);
+            this.btn_back.Location = new System.Drawing.Point(769, 648);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(138, 40);
             this.btn_back.TabIndex = 63;
             this.btn_back.Text = "Отмена";
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_cansel_Click);
             // 
-            // Register_as_a_runner
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // tb_date
+            // 
+            this.tb_date.Font = new System.Drawing.Font("Arial", 13.8F);
+            this.tb_date.Location = new System.Drawing.Point(1080, 572);
+            this.tb_date.Name = "tb_date";
+            this.tb_date.Size = new System.Drawing.Size(250, 34);
+            this.tb_date.TabIndex = 66;
+            // 
+            // userControl11
+            // 
+            this.userControl11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.userControl11.Location = new System.Drawing.Point(0, 729);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(1432, 74);
+            this.userControl11.TabIndex = 64;
+            this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
+            // 
+            // RegisterAsARunner
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -386,12 +394,13 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(1432, 803);
+            this.Controls.Add(this.tb_date);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_registration);
             this.Controls.Add(this.icon);
             this.Controls.Add(this.tb_country);
             this.Controls.Add(this.country);
-            this.Controls.Add(this.tb_date);
             this.Controls.Add(this.date);
             this.Controls.Add(this.btn_fail);
             this.Controls.Add(this.tb_path_img);
@@ -401,7 +410,6 @@
             this.Controls.Add(this.tb_last);
             this.Controls.Add(this.tb_name);
             this.Controls.Add(this.tb_password);
-            this.Controls.Add(this.panel_back_gorund_down);
             this.Controls.Add(this.tx_password2);
             this.Controls.Add(this.tb_email);
             this.Controls.Add(this.last);
@@ -416,10 +424,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximumSize = new System.Drawing.Size(1450, 850);
             this.MinimumSize = new System.Drawing.Size(1450, 850);
-            this.Name = "Register_as_a_runner";
+            this.Name = "RegisterAsARunner";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marathon Skills 2021 - Register as a runner";
-            this.panel_back_gorund_down.ResumeLayout(false);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Register_as_a_runner_FormClosed);
+            this.Load += new System.EventHandler(this.Register_as_a_runner_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_runner)).EndInit();
@@ -430,9 +439,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel_back_gorund_down;
-        private System.Windows.Forms.Label count_date;
         private System.Windows.Forms.TextBox tx_password2;
         private System.Windows.Forms.TextBox tb_email;
         private System.Windows.Forms.Label last;
@@ -454,12 +460,14 @@
         private System.Windows.Forms.TextBox tb_path_img;
         private System.Windows.Forms.Label img_text;
         private System.Windows.Forms.Button btn_fail;
-        private System.Windows.Forms.TextBox tb_date;
         private System.Windows.Forms.Label date;
         private System.Windows.Forms.ComboBox tb_country;
         private System.Windows.Forms.Label country;
         private System.Windows.Forms.PictureBox icon;
         private System.Windows.Forms.Button btn_registration;
         private System.Windows.Forms.Button btn_back;
+        private UserControl1 userControl11;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DateTimePicker tb_date;
     }
 }

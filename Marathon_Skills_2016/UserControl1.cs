@@ -19,7 +19,7 @@ namespace Marathon_Skills_2016
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            var end_date = DateTime.Parse("21-10-2021");
+            var end_date = DateTime.Parse("08-02-2021 12:00:00");
             count_date.Text = $"{string.Format("{0:dd} дн. {0:hh} ч. {0:mm} м. {0:ss} сек.", end_date - DateTime.Now)} до старта марафона";
         }
     }

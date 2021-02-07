@@ -20,11 +20,11 @@ namespace Marathon_Skills_2016
             InitializeComponent();
         }
 
-        List<ComBox> arraylist  = null;
+        List<ComBox> arraylist = null;
         private void Runner_Sponsor_test_Load(object sender, EventArgs e)
         {
-          
-           
+
+
             tb_summa.Text = "0";
             summa.Text = $"${ tb_summa.Text}";
 
@@ -40,17 +40,17 @@ namespace Marathon_Skills_2016
                 var ds = new DataSet();
                 adapter.Fill(ds);
 
-               arraylist= new List<ComBox>();
+                arraylist = new List<ComBox>();
                 for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     var row = ds.Tables[0].Rows[i].ItemArray;
-                    arraylist.Add(new ComBox { name = row[1].ToString(), blag = row[2].ToString(), logo = row[3].ToString(),desription = row[4].ToString() });
+                    arraylist.Add(new ComBox { name = row[1].ToString(), blag = row[2].ToString(), logo = row[3].ToString(), desription = row[4].ToString() });
                 }
 
                 cb_runner.DataSource = arraylist;
                 cb_runner.DisplayMember = "name";
                 cb_runner.ValueMember = "blag";
-                
+
             }
             catch (Exception Error)
             {
@@ -65,7 +65,7 @@ namespace Marathon_Skills_2016
         private void date_cont_Tick(object sender, EventArgs e)
         {
             var end_date = DateTime.Parse("21-10-2021");
-           // count_date.Text = $"{string.Format("{0:dd} дн. {0:hh} ч. {0:mm} м. {0:ss} сек.", end_date - DateTime.Now)} до старта марафона";
+            // count_date.Text = $"{string.Format("{0:dd} дн. {0:hh} ч. {0:mm} м. {0:ss} сек.", end_date - DateTime.Now)} до старта марафона";
         }
 
         private void Runner_Sponsor_test_FormClosed(object sender, FormClosedEventArgs e)
@@ -90,7 +90,7 @@ namespace Marathon_Skills_2016
         private void btn_minus_summ_Click(object sender, EventArgs e)
         {
             summa_count = summa_count - 10;
-            if (summa_count > 0)
+            if (summa_count >= 0)
             {
                 tb_summa.Text = summa_count.ToString();
                 summa.Text = $"${ summa_count }";
@@ -104,17 +104,25 @@ namespace Marathon_Skills_2016
 
         private void tb_summa_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(tb_summa.Text, @"[A-я]"))
+
+            if (tb_summa.Text.Length != 0)
             {
-                if (tb_summa.Text != "")
+                if (!Regex.IsMatch(tb_summa.Text, @"[A-я]"))
                 {
-                    summa.Text = $"${tb_summa.Text}";
-                    summa_count = Convert.ToInt32(summa.Text.Replace("$", ""));
+                    if (tb_summa.Text != "")
+                    {
+                        summa.Text = $"${tb_summa.Text}";
+                        summa_count = Convert.ToInt32(summa.Text.Replace("$", ""));
+                    }
+                    else
+                    {
+                        summa.Text = $"${tb_summa.Text}";
+                        summa_count = Convert.ToInt32("");
+                    }
                 }
                 else
                 {
-                    summa.Text = $"${tb_summa.Text}";
-                    summa_count = Convert.ToInt32("");
+                    tb_summa.Text = "0";
                 }
             }
             else
@@ -122,8 +130,7 @@ namespace Marathon_Skills_2016
                 tb_summa.Text = "0";
             }
 
-
-        }
+}
 
         private void btn_pay_Click(object sender, EventArgs e)
         {
@@ -165,7 +172,7 @@ namespace Marathon_Skills_2016
 
             var form = new Naimenovanie_sponsora(arraylist[index].blag, arraylist[index].desription, arraylist[index].logo);
             form.ShowDialog();
-            
+
 
         }
 
