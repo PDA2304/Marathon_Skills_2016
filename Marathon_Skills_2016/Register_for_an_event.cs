@@ -13,9 +13,11 @@ namespace Marathon_Skills_2016
 {
     public partial class Register_for_an_event : Form
     {
-        public Register_for_an_event()
+        string email = "";
+        public Register_for_an_event(string Email)
         {
             InitializeComponent();
+            this.email = Email;
         }
         List<ComBox> arraylist = null;
 
@@ -59,7 +61,7 @@ namespace Marathon_Skills_2016
         private void btn_cansel_Click(object sender, EventArgs e)
         {
             Hide();
-            var form = new Runner_Menu();
+            var form = new Runner_Menu(email);
             form.Show();
         }
 
@@ -126,6 +128,9 @@ namespace Marathon_Skills_2016
             if (textBox1.Text.Length != 0)
                 if ((checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true) && Convert.ToInt32(textBox1.Text) >= vznos)
                 {
+                    var form = new Registration_confirmation(email);
+                    form.Show();
+                    Hide();
                 }
                 else
                 {

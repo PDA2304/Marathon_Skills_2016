@@ -113,6 +113,7 @@
             this.btn_rigistration_marathon.TabIndex = 59;
             this.btn_rigistration_marathon.Text = "Регистрация на марафон";
             this.btn_rigistration_marathon.UseVisualStyleBackColor = true;
+            this.btn_rigistration_marathon.Click += new System.EventHandler(this.btn_rigistration_marathon_Click);
             // 
             // btn_results
             // 
@@ -169,6 +170,7 @@
             this.btn_edit_profile.TabIndex = 69;
             this.btn_edit_profile.Text = "Редактирование профиля";
             this.btn_edit_profile.UseVisualStyleBackColor = true;
+            this.btn_edit_profile.Click += new System.EventHandler(this.btn_edit_profile_Click);
             // 
             // btn_contact
             // 
@@ -208,6 +210,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marathon Skills 2021 - Runner menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Runner_Menu_FormClosed);
+            this.Load += new System.EventHandler(this.Runner_Menu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.table_btn.ResumeLayout(false);

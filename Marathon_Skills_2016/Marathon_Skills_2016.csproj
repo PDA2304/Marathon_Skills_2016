@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About_Marathon_Skills_2021.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About_Marathon_Skills_2021.Designer.cs">
+      <DependentUpon>About_Marathon_Skills_2021.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrator_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,11 +64,23 @@
     <Compile Include="Coordinator_Menu.Designer.cs">
       <DependentUpon>Coordinator_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edit_runner_profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_runner_profile.Designer.cs">
+      <DependentUpon>Edit_runner_profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Find_Out_More_Information.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Find_Out_More_Information.Designer.cs">
       <DependentUpon>Find_Out_More_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="How_long_is_a_marathon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="How_long_is_a_marathon.Designer.cs">
+      <DependentUpon>How_long_is_a_marathon.cs</DependentUpon>
     </Compile>
     <Compile Include="List_Of_Charities.cs">
       <SubType>Form</SubType>
@@ -95,6 +113,12 @@
     </Compile>
     <Compile Include="Register_for_an_event.Designer.cs">
       <DependentUpon>Register_for_an_event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration_confirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration_confirmation.Designer.cs">
+      <DependentUpon>Registration_confirmation.cs</DependentUpon>
     </Compile>
     <Compile Include="Rigister_as_runner.cs">
       <SubType>Form</SubType>
@@ -138,14 +162,23 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="About_Marathon_Skills_2021.resx">
+      <DependentUpon>About_Marathon_Skills_2021.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrator_Menu.resx">
       <DependentUpon>Administrator_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coordinator_Menu.resx">
       <DependentUpon>Coordinator_Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Edit_runner_profile.resx">
+      <DependentUpon>Edit_runner_profile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Find_Out_More_Information.resx">
       <DependentUpon>Find_Out_More_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="How_long_is_a_marathon.resx">
+      <DependentUpon>How_long_is_a_marathon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="List_Of_Charities.resx">
       <DependentUpon>List_Of_Charities.cs</DependentUpon>
@@ -168,6 +201,12 @@
     </Compile>
     <EmbeddedResource Include="Register_as_a_runner.resx">
       <DependentUpon>Register_as_a_runner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register_for_an_event.resx">
+      <DependentUpon>Register_for_an_event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration_confirmation.resx">
+      <DependentUpon>Registration_confirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rigister_as_runner.resx">
       <DependentUpon>Rigister_as_runner.cs</DependentUpon>
@@ -218,6 +257,19 @@
     <Content Include="Properties\img\charity_data\the-red-cross-logo.png" />
     <Content Include="Properties\img\charity_data\upbeat-logo.png" />
     <Content Include="Properties\img\charity_data\wwsm-rescue-logo.png" />
+    <None Include="Resources\worm.jpg" />
+    <None Include="Resources\slug.jpg" />
+    <None Include="Resources\sloth.jpg" />
+    <None Include="Resources\ronaldinho.jpg" />
+    <None Include="Resources\pair-of-havaianas.jpg" />
+    <None Include="Resources\jaguar.jpg" />
+    <None Include="Resources\horse.png" />
+    <None Include="Resources\football-field.jpg" />
+    <None Include="Resources\f1-car.jpg" />
+    <None Include="Resources\capybara.jpg" />
+    <None Include="Resources\bus.jpg" />
+    <None Include="Resources\airbus-a380.jpg" />
+    <None Include="Resources\map-icon-information.png" />
     <None Include="Resources\unnamed.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

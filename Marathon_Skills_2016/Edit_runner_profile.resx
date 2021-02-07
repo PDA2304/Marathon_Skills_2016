@@ -117,66 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="map_icon_information" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map-icon-information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sql_country" xml:space="preserve">
-    <value>select * from Country</value>
-  </data>
-  <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unnamed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sql_select_Runner_Sponsor" xml:space="preserve">
-    <value>SELECT        TOP (100) PERCENT dbo.Role.RoleId, CONCAT(dbo.[User].FirstName, ' ', dbo.[User].LastName, ' - ', dbo.RegistrationEvent.BibNumber, ' (', dbo.Country.CountryCode, ')') AS Expr1, dbo.Charity.CharityName, 
-                         dbo.Charity.CharityLogo, dbo.Charity.CharityDescription
-FROM            dbo.Country INNER JOIN
-                         dbo.Runner ON dbo.Country.CountryCode = dbo.Runner.CountryCode INNER JOIN
-                         dbo.Registration ON dbo.Runner.RunnerId = dbo.Registration.RunnerId INNER JOIN
-                         dbo.RegistrationEvent ON dbo.Registration.RegistrationId = dbo.RegistrationEvent.RegistrationId INNER JOIN
-                         dbo.[User] ON dbo.Runner.Email = dbo.[User].Email INNER JOIN
-                         dbo.Role ON dbo.[User].RoleId = dbo.Role.RoleId INNER JOIN
-                         dbo.Charity ON dbo.Registration.CharityId = dbo.Charity.CharityId
-WHERE        (dbo.Role.RoleId = N'R')
-ORDER BY dbo.Country.CountryCode</value>
-  </data>
-  <data name="connection" xml:space="preserve">
-    <value>Data Source=DESKTOP-1CRVPTK\ISIP_D_A_PAHOMOV;Initial Catalog=MarathonSkills2016;Integrated Security=True</value>
-  </data>
-  <data name="airbus-a380" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\airbus-a380.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="capybara" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\capybara.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="f1-car" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\f1-car.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="football-field" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\football-field.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="horse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\horse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="jaguar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jaguar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pair-of-havaianas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pair-of-havaianas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ronaldinho" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ronaldinho.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sloth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sloth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="slug" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slug.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="worm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\worm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="icon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACQAAAAuCAYAAABAm7v+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        dAAAEnQB3mYfeAAAAmlJREFUWEftmNtvEkEYxf0PNW251EvU1NBLtDGxVVuqMcYH9ckWW63RWIr6auKl
+        1hZYoEihAeqDpb6oicBuTQoaEBAeOO433dm6FUoTUyhxTnKybObM8JtkZvbLHMIOycoGAsEQFtxeSP4l
+        RGOrqFQqWqtRX5MpSIEg3i56WN7tkZDP57VWozKZrDpeAItqhmW9PpRKJa11W38BKco3BENh1tG/9A6x
+        +Pu6QMlUisFTlv7A7a0PtLmZYRP0Sn6W9/oCKtAvrXVbAqgh0IRjEtx3xh2YcboYCHWiAZ6/eInJqfsY
+        n7ir53h29skzluFAtDamHzxUsw5Dlvo+ejyD+QU3PBoQPafuTRvGZUDW7mPg7jJZYB+7Cp+6UPksnK6n
+        OHW6B2ZLt54jd3aZce36DZahLJmABs4OwmS2GrL0PjR8Ca/m5hk4n0DPGZthXAHU/kCtNgMiQltvP0bt
+        V3B5xN50j4yO4cLQRRw/cXIL6PCRDjhnXeylVZIVBecGz7PfAqiW2gsolZbZEU9bk8qK5cgKCsWi1moU
+        lR88y53L1f6WpdVxPepWp6OBcvT8WSiwNgFEEkD/D1ArJIAaqelA8fgqq4ks1qN6qUFVRl//AMrlMpSN
+        Ji9qASSAWgqU/f4DH9YSSKx/xFpiHZ8+f2GdaimTzepZ7lo3Gv8EtB86cECN1H4ndbVaNXg37TW7M/dn
+        dleg/dhlJFGgCaBaagpQWpZZmN8FRlaiKNYBSqbSepY7V+fSU5YVSL4AuxeiHD0LewFqhQRQIxmAOjpN
+        uHnrNqLRGEKh5aY7HI7g9dwb2Hr7toD41/cgGAB+A4JtHO0ogpbGAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>

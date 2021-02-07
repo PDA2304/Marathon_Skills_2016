@@ -12,9 +12,11 @@ namespace Marathon_Skills_2016
 {
     public partial class Runner_Menu : Form
     {
-        public Runner_Menu()
+        string email = "";
+        public Runner_Menu(string Email)
         {
             InitializeComponent();
+            this.email = Email;
         }
 
         private void userControl11_Load(object sender, EventArgs e)
@@ -38,6 +40,25 @@ namespace Marathon_Skills_2016
             var form = new start_screen();
             Hide();
             form.Show();
+        }
+
+        private void btn_rigistration_marathon_Click(object sender, EventArgs e)
+        {
+            var form = new Register_for_an_event(email);
+            Hide();
+            form.Show();
+        }
+
+        private void Runner_Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_edit_profile_Click(object sender, EventArgs e)
+        {
+            var form = new Edit_runner_profile(email);
+            form.Show();
+            Hide();
         }
     }
 }

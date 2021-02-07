@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register_for_an_event));
             this.marathon_skills_2021 = new System.Windows.Forms.Label();
             this.btn_cansel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -134,7 +133,6 @@
             this.information.Name = "information";
             this.information.Size = new System.Drawing.Size(1432, 99);
             this.information.TabIndex = 33;
-            this.information.Text = resources.GetString("information.Text");
             this.information.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
@@ -380,7 +378,7 @@
             // 
             // icon_information
             // 
-            this.icon_information.Image = ((System.Drawing.Image)(resources.GetObject("icon_information.Image")));
+            this.icon_information.Image = global::Marathon_Skills_2016.Properties.Resources.map_icon_information;
             this.icon_information.Location = new System.Drawing.Point(655, 534);
             this.icon_information.Name = "icon_information";
             this.icon_information.Size = new System.Drawing.Size(38, 34);
@@ -419,8 +417,8 @@
             this.MaximumSize = new System.Drawing.Size(1450, 850);
             this.MinimumSize = new System.Drawing.Size(1450, 850);
             this.Name = "Register_for_an_event";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "Register_for_an_event";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Marathon Skills 2016 - Register_for_an_event";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Register_for_an_event_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

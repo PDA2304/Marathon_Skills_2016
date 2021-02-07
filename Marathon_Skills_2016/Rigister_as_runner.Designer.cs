@@ -125,6 +125,7 @@
             this.btn_new_runner.TabIndex = 69;
             this.btn_new_runner.Text = "Я новый участник";
             this.btn_new_runner.UseVisualStyleBackColor = true;
+            this.btn_new_runner.Click += new System.EventHandler(this.btn_new_runner_Click);
             // 
             // userControl11
             // 
@@ -153,6 +154,7 @@
             this.Name = "Rigister_as_runner";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marathon Skills 2021 - Register as a runner";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Rigister_as_runner_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.table_btn.ResumeLayout(false);

@@ -35,5 +35,17 @@ namespace Marathon_Skills_2016
             form.Show();
             this.Hide();
         }
+
+        private void btn_new_runner_Click(object sender, EventArgs e)
+        {
+            var form = new Register_as_a_runner();
+            form.Show();
+            this.Hide();
+        }
+
+        private void Rigister_as_runner_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

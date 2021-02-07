@@ -36,15 +36,15 @@ namespace Marathon_Skills_2016
                 {
                     if (row[2].ToString() == "R")
                     {
-                        var form = new Runner_Menu();
+                        var form = new Runner_Menu(tb_email.Text);
                         form.Show();
-                        this.Close();
+                        this.Hide();
                     }
                     if (row[2].ToString() == "A")
                     {
                         var form = new Coordinator_Menu();
                         form.Show();
-                        this.Close();
+                        this.Hide();
                     }
                     if (row[2].ToString() == "C")
                     {

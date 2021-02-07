@@ -176,6 +176,7 @@
             this.btn_maragon_date.TabIndex = 58;
             this.btn_maragon_date.Text = "Насколько долгий марафон";
             this.btn_maragon_date.UseVisualStyleBackColor = true;
+            this.btn_maragon_date.Click += new System.EventHandler(this.btn_maragon_date_Click);
             // 
             // btn_marathon_skills_2021
             // 
@@ -188,6 +189,7 @@
             this.btn_marathon_skills_2021.TabIndex = 59;
             this.btn_marathon_skills_2021.Text = "Marathon Skills 2021";
             this.btn_marathon_skills_2021.UseVisualStyleBackColor = true;
+            this.btn_marathon_skills_2021.Click += new System.EventHandler(this.btn_marathon_skills_2021_Click);
             // 
             // table_btn
             // 

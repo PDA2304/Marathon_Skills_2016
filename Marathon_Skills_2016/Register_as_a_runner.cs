@@ -223,7 +223,7 @@ namespace Marathon_Skills_2016
                     command = new SqlCommand(SQL1, conect);
                     command.ExecuteNonQuery();
                     Hide();
-                    var form = new Register_for_an_event();
+                    var form = new Register_for_an_event(tb_email.Text);
                     form.Show();
                 }
                 catch (Exception ee)
