@@ -58,6 +58,24 @@
     <Compile Include="Administrator_Menu.Designer.cs">
       <DependentUpon>Administrator_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="BMICalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BMICalculator.Designer.cs">
+      <DependentUpon>BMICalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BMR_Calculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BMR_Calculator.Designer.cs">
+      <DependentUpon>BMR_Calculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Certificate_preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Certificate_preview.Designer.cs">
+      <DependentUpon>Certificate_preview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Coordinator_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +100,12 @@
     <Compile Include="How_long_is_a_marathon.Designer.cs">
       <DependentUpon>How_long_is_a_marathon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interactive_Map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interactive_Map.Designer.cs">
+      <DependentUpon>Interactive_Map.cs</DependentUpon>
+    </Compile>
     <Compile Include="List_Of_Charities.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,14 +118,43 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager_a_runner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_a_runner.Designer.cs">
+      <DependentUpon>Manager_a_runner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="My_race_results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_race_results.Designer.cs">
+      <DependentUpon>My_race_results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="My_Sponsorship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_Sponsorship.Designer.cs">
+      <DependentUpon>My_Sponsorship.cs</DependentUpon>
+    </Compile>
     <Compile Include="Naimenovanie_sponsora.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Naimenovanie_sponsora.Designer.cs">
       <DependentUpon>Naimenovanie_sponsora.cs</DependentUpon>
     </Compile>
+    <Compile Include="Previous_race_results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Previous_race_results.Designer.cs">
+      <DependentUpon>Previous_race_results.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Register_as_a_runner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +178,12 @@
     </Compile>
     <Compile Include="Rigister_as_runner.Designer.cs">
       <DependentUpon>Rigister_as_runner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Runner_management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Runner_management.Designer.cs">
+      <DependentUpon>Runner_management.cs</DependentUpon>
     </Compile>
     <Compile Include="Runner_Menu.cs">
       <SubType>Form</SubType>
@@ -150,6 +209,12 @@
     <Compile Include="Sponsorship_Confirmation.Designer.cs">
       <DependentUpon>Sponsorship_Confirmation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sponsorship_overview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sponsorship_overview.Designer.cs">
+      <DependentUpon>Sponsorship_overview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Start_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,11 +227,39 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl3.Designer.cs">
+      <DependentUpon>UserControl3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl4.Designer.cs">
+      <DependentUpon>UserControl4.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="About_Marathon_Skills_2021.resx">
       <DependentUpon>About_Marathon_Skills_2021.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator_Menu.resx">
       <DependentUpon>Administrator_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BMICalculator.resx">
+      <DependentUpon>BMICalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BMR_Calculator.resx">
+      <DependentUpon>BMR_Calculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Certificate_preview.resx">
+      <DependentUpon>Certificate_preview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coordinator_Menu.resx">
       <DependentUpon>Coordinator_Menu.cs</DependentUpon>
@@ -180,25 +273,35 @@
     <EmbeddedResource Include="How_long_is_a_marathon.resx">
       <DependentUpon>How_long_is_a_marathon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interactive_Map.resx">
+      <DependentUpon>Interactive_Map.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="List_Of_Charities.resx">
       <DependentUpon>List_Of_Charities.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manager_a_runner.resx">
+      <DependentUpon>Manager_a_runner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My_race_results.resx">
+      <DependentUpon>My_race_results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My_Sponsorship.resx">
+      <DependentUpon>My_Sponsorship.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Naimenovanie_sponsora.resx">
       <DependentUpon>Naimenovanie_sponsora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Previous_race_results.resx">
+      <DependentUpon>Previous_race_results.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Register_as_a_runner.resx">
       <DependentUpon>Register_as_a_runner.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rigister_as_runner.resx">
       <DependentUpon>Rigister_as_runner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Runner_management.resx">
+      <DependentUpon>Runner_management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Runner_Menu.resx">
       <DependentUpon>Runner_Menu.cs</DependentUpon>
@@ -223,11 +329,23 @@
     <EmbeddedResource Include="Sponsorship_Confirmation.resx">
       <DependentUpon>Sponsorship_Confirmation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sponsorship_overview.resx">
+      <DependentUpon>Sponsorship_overview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Start_Screen.resx">
       <DependentUpon>Start_Screen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl3.resx">
+      <DependentUpon>UserControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl4.resx">
+      <DependentUpon>UserControl4.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -257,6 +375,28 @@
     <Content Include="Properties\img\charity_data\the-red-cross-logo.png" />
     <Content Include="Properties\img\charity_data\upbeat-logo.png" />
     <Content Include="Properties\img\charity_data\wwsm-rescue-logo.png" />
+    <None Include="Resources\tick-icon.png" />
+    <None Include="Resources\cross-icon.png" />
+    <None Include="Resources\marathon-skills-2014-logo.png" />
+    <None Include="Resources\marathon-skills-2014-certificate-seal.png" />
+    <None Include="Resources\male-icon.png" />
+    <None Include="Resources\female-icon.png" />
+    <None Include="Resources\bmi-underweight-icon.png" />
+    <None Include="Resources\bmi-overweight-icon.png" />
+    <None Include="Resources\bmi-obese-icon.png" />
+    <None Include="Resources\bmi-healthy-icon.png" />
+    <None Include="Resources\Arrow.png" />
+    <None Include="Resources\map-icon-information.png" />
+    <None Include="Resources\map-icon-toilets.png" />
+    <None Include="Resources\map-icon-start.png" />
+    <None Include="Resources\map-icon-medical.png" />
+    <None Include="Resources\map-icon-energy-bars.png" />
+    <None Include="Resources\map-icon-drinks.png" />
+    <None Include="Resources\marathon-skills-2016-marathon-map.jpg" />
+    <None Include="Resources\teatro-municipal.jpg" />
+    <None Include="Resources\marathon-image.jpg" />
+    <None Include="Resources\ibirapuera-park-lake.jpg" />
+    <None Include="Resources\banco-banespa.jpg" />
     <None Include="Resources\worm.jpg" />
     <None Include="Resources\slug.jpg" />
     <None Include="Resources\sloth.jpg" />
@@ -269,7 +409,6 @@
     <None Include="Resources\capybara.jpg" />
     <None Include="Resources\bus.jpg" />
     <None Include="Resources\airbus-a380.jpg" />
-    <None Include="Resources\map-icon-information.png" />
     <None Include="Resources\unnamed.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

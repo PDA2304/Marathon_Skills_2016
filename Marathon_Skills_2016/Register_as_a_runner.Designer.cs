@@ -81,7 +81,6 @@
             this.tb_email.Name = "tb_email";
             this.tb_email.Size = new System.Drawing.Size(397, 34);
             this.tb_email.TabIndex = 41;
-            this.tb_email.Leave += new System.EventHandler(this.tb_email_Leave);
             // 
             // last
             // 
@@ -223,7 +222,6 @@
             this.tb_name.Name = "tb_name";
             this.tb_name.Size = new System.Drawing.Size(334, 34);
             this.tb_name.TabIndex = 50;
-            this.tb_name.TextChanged += new System.EventHandler(this.tb_name_TextChanged);
             this.tb_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_name_KeyPress);
             this.tb_name.Leave += new System.EventHandler(this.tb_name_Leave);
             // 

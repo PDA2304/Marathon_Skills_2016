@@ -60,5 +60,19 @@ namespace Marathon_Skills_2016
             form.Show();
             Hide();
         }
+
+        private void btn_results_Click(object sender, EventArgs e)
+        {
+            var form = new My_race_results(email);
+            form.Show();
+            Hide();
+        }
+
+        private void btn_sponsor_Click(object sender, EventArgs e)
+        {
+            var form = new My_Sponsorship(email);
+            form.Show();
+            Hide();
+        }
     }
 }

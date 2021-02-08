@@ -69,53 +69,6 @@ namespace Marathon_Skills_2016
             {
                 conect.Close();
             }
-
-
-        }
-
-        public Image ByteArrayToImage(byte[] bt)
-        {
-            using (var ms = new MemoryStream(bt))
-            {
-                Image image = Image.FromStream(ms);
-                return image;
-
-            }
-
-            // -- Добавление картикни в БД и чтение картинки из бд
-            //// var data = File.ReadAllBytes(@"C:\Users\isip_\source\repos\Marathon_Skills_2016\Marathon_Skills_2016\Properties\img\charity_data\aves-do-brazil-logo.png");
-
-            // //var FS = new FileStream(@"C:\Users\isip_\source\repos\Marathon_Skills_2016\Marathon_Skills_2016\Properties\img\charity_data\aves-do-brazil-logo.png", FileMode.Open, FileAccess.Read);
-            // //var br = new BinaryReader(FS);
-            // // var img = br.ReadBytes((int)FS.Length);
-
-            // string sql = "insert INTO test(IMG) values(@img)";
-            // var conect = new SqlConnection(connection);
-            // try
-            // {
-            //     conect.Open();
-            //     //  var command = new SqlCommand(sql, conect);
-            //     var adapter = new SqlDataAdapter("select * from test", conect);
-            //     var ds = new DataSet();
-            //     adapter.Fill(ds);
-            //     var row = ds.Tables[0].Rows[1].ItemArray;
-            //     var bt = row[0] as byte[];
-            //     //command.Parameters.Add(new SqlParameter("@img", img));
-            //     //command.ExecuteNonQuery();
-            //     img_runner.Image = ByteArrayToImage(bt);
-            // }
-            // catch (Exception ee)
-            // {
-            //     MessageBox.Show(ee.Message);
-            // }
-            // finally
-            // {
-            //     conect.Close();
-            // }
-
-
-
-
         }
 
         private void btn_fail_Click(object sender, EventArgs e)
@@ -130,10 +83,6 @@ namespace Marathon_Skills_2016
                 (sender as TextBox).Text = (sender as TextBox).Text[0].ToString().ToUpper() + (sender as TextBox).Text.Substring(1, (sender as TextBox).Text.Length - 1).ToLower();
         }
 
-        private void tb_name_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void tb_name_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -212,14 +161,8 @@ namespace Marathon_Skills_2016
                 {
                     conect.Open();
                     var command = new SqlCommand(SQL, conect);
-                    ////     var adapter = new SqlDataAdapter("select * from test", conect);
-                    ////     var ds = new DataSet();
-                    ////     adapter.Fill(ds);
-                    ////     var row = ds.Tables[0].Rows[1].ItemArray;
-                    ////     var bt = row[0] as byte[];
                     command.Parameters.Add(new SqlParameter("@img", img_byte));
                     command.ExecuteNonQuery();
-                    //     img_runner.Image = ByteArrayToImage(bt);
                     command = new SqlCommand(SQL1, conect);
                     command.ExecuteNonQuery();
                     Hide();

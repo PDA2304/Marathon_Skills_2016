@@ -378,7 +378,6 @@
             // 
             // icon_information
             // 
-            this.icon_information.Image = global::Marathon_Skills_2016.Properties.Resources.map_icon_information;
             this.icon_information.Location = new System.Drawing.Point(655, 534);
             this.icon_information.Name = "icon_information";
             this.icon_information.Size = new System.Drawing.Size(38, 34);
@@ -418,7 +417,7 @@
             this.MinimumSize = new System.Drawing.Size(1450, 850);
             this.Name = "Register_for_an_event";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Marathon Skills 2016 - Register_for_an_event";
+            this.Text = "Marathon Skills 2021 - Register_for_an_event";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Register_for_an_event_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

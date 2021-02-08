@@ -21,5 +21,24 @@ namespace Marathon_Skills_2016
         {
             Application.Exit();
         }
+
+        private void userControl11_Load(object sender, EventArgs e)
+        {
+            userControl11.timer1.Start();
+        }
+
+        private void btn_cansel_Click(object sender, EventArgs e)
+        {
+            var form = new Find_Out_More_Information();
+            Hide();
+            form.Show();
+        }
+
+        private void MapButton_Click(object sender, EventArgs e)
+        {
+            var form = new Interactive_Map();
+            Hide();
+            form.Show();
+        }
     }
 }

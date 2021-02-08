@@ -118,18 +118,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="map_icon_information" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map-icon-information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ronaldinho" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ronaldinho.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sql_country" xml:space="preserve">
-    <value>select * from Country</value>
+  <data name="marathon-skills-2016-marathon-map" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marathon-skills-2016-marathon-map.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slug" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slug.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sloth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sloth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unnamed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="teatro-municipal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\teatro-municipal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f1-car" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f1-car.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sql_select_Runner_Sponsor" xml:space="preserve">
     <value>SELECT        TOP (100) PERCENT dbo.Role.RoleId, CONCAT(dbo.[User].FirstName, ' ', dbo.[User].LastName, ' - ', dbo.RegistrationEvent.BibNumber, ' (', dbo.Country.CountryCode, ')') AS Expr1, dbo.Charity.CharityName, 
-                         dbo.Charity.CharityLogo, dbo.Charity.CharityDescription
+                         dbo.Charity.CharityLogo, dbo.Charity.CharityDescription,dbo.Runner.Email
 FROM            dbo.Country INNER JOIN
                          dbo.Runner ON dbo.Country.CountryCode = dbo.Runner.CountryCode INNER JOIN
                          dbo.Registration ON dbo.Runner.RunnerId = dbo.Registration.RunnerId INNER JOIN
@@ -140,43 +152,158 @@ FROM            dbo.Country INNER JOIN
 WHERE        (dbo.Role.RoleId = N'R')
 ORDER BY dbo.Country.CountryCode</value>
   </data>
-  <data name="connection" xml:space="preserve">
-    <value>Data Source=DESKTOP-1CRVPTK\ISIP_D_A_PAHOMOV;Initial Catalog=MarathonSkills2016;Integrated Security=True</value>
-  </data>
-  <data name="airbus-a380" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\airbus-a380.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="capybara" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\capybara.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="f1-car" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\f1-car.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="football-field" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\football-field.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="horse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\horse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="jaguar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jaguar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ibirapuera-park-lake" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ibirapuera-park-lake.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pair-of-havaianas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pair-of-havaianas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ronaldinho" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ronaldinho.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="capybara" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\capybara.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sloth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sloth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="connection" xml:space="preserve">
+    <value>Data Source=DESKTOP-1CRVPTK\ISIP_D_A_PAHOMOV;Initial Catalog=MarathonSkills2016;Integrated Security=True</value>
   </data>
-  <data name="slug" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slug.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="horse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\horse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="worm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\worm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="airbus-a380" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\airbus-a380.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marathon-image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marathon-image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banco-banespa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banco-banespa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jaguar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jaguar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sql_country" xml:space="preserve">
+    <value>select * from Country</value>
+  </data>
+  <data name="map-icon-drinks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map-icon-drinks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map-icon-energy-bars" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map-icon-energy-bars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map-icon-medical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map-icon-medical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map-icon-start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map-icon-start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map-icon-toilets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map-icon-toilets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map_icon_information" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map-icon-information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sql_results" xml:space="preserve">
+    <value>SELECT        TOP (100) PERCENT dbo.RegistrationEvent.RaceTime AS Время, dbo.[User].FirstName + ' ' + dbo.[User].LastName AS [Фамилия и Имя бегуна], dbo.Runner.CountryCode AS Страна, dbo.Runner.Gender AS Пол, 
+                         Marathon_1.YearHeld AS Год, Event_1.EventTypeId AS [Тип марафона]
+FROM            dbo.Registration INNER JOIN
+                         dbo.RegistrationEvent ON dbo.RegistrationEvent.RegistrationId = dbo.Registration.RegistrationId INNER JOIN
+                         dbo.Runner ON dbo.Runner.RunnerId = dbo.Registration.RunnerId INNER JOIN
+                         dbo.[User] ON dbo.[User].Email = dbo.Runner.Email INNER JOIN
+                         dbo.Event AS Event_1 ON Event_1.EventId = dbo.RegistrationEvent.EventId INNER JOIN
+                         dbo.Marathon AS Marathon_1 ON Event_1.MarathonId = Marathon_1.MarathonId INNER JOIN
+                         dbo.EventType ON Event_1.EventTypeId = dbo.EventType.EventTypeId</value>
+  </data>
+  <data name="sql_my_results" xml:space="preserve">
+    <value>SELECT        TOP (100) PERCENT dbo.Marathon.MarathonName, dbo.EventType.EventTypeName, dbo.RegistrationEvent.RaceTime AS Время, dbo.Runner.Gender AS Пол, dbo.[User].Email
+FROM            dbo.Registration INNER JOIN
+                         dbo.RegistrationEvent ON dbo.RegistrationEvent.RegistrationId = dbo.Registration.RegistrationId INNER JOIN
+                         dbo.Runner ON dbo.Runner.RunnerId = dbo.Registration.RunnerId INNER JOIN
+                         dbo.[User] ON dbo.[User].Email = dbo.Runner.Email INNER JOIN
+                         dbo.Event AS Event_1 ON Event_1.EventId = dbo.RegistrationEvent.EventId INNER JOIN
+                         dbo.Marathon AS Marathon_1 ON Event_1.MarathonId = Marathon_1.MarathonId INNER JOIN
+                         dbo.Marathon ON Event_1.MarathonId = dbo.Marathon.MarathonId INNER JOIN
+                         dbo.EventType ON Event_1.EventTypeId = dbo.EventType.EventTypeId</value>
+  </data>
+  <data name="sql_sponsor_runner" xml:space="preserve">
+    <value>SELECT        dbo.Charity.CharityName, dbo.Charity.CharityDescription, dbo.Charity.CharityLogo, dbo.Sponsorship.SponsorName, dbo.Sponsorship.Amount
+FROM            dbo.Registration INNER JOIN
+                         dbo.Sponsorship ON dbo.Registration.RegistrationId = dbo.Sponsorship.RegistrationId INNER JOIN
+                         dbo.Charity ON dbo.Registration.CharityId = dbo.Charity.CharityId INNER JOIN
+                         dbo.Runner ON dbo.Registration.RunnerId = dbo.Runner.RunnerId</value>
+  </data>
+  <data name="sql_sponsor" xml:space="preserve">
+    <value>SELECT        TOP (100) PERCENT dbo.Charity.CharityName, dbo.Sponsorship.Amount
+FROM            dbo.Registration INNER JOIN
+                         dbo.Sponsorship ON dbo.Registration.RegistrationId = dbo.Sponsorship.RegistrationId INNER JOIN
+                         dbo.Charity ON dbo.Registration.CharityId = dbo.Charity.CharityId
+ORDER BY dbo.Charity.CharityName</value>
+  </data>
+  <data name="sql_amount_summ" xml:space="preserve">
+    <value>SELECT        TOP (100) PERCENT SUM(dbo.Sponsorship.Amount), dbo.Registration.CharityId  as Код
+FROM  dbo.Registration INNER JOIN
+                         dbo.Sponsorship ON dbo.Registration.RegistrationId = dbo.Sponsorship.RegistrationId INNER JOIN
+                         dbo.Charity ON dbo.Registration.CharityId = dbo.Charity.CharityId
+						   group by.Registration.CharityId ORDER BY Код DESC</value>
+  </data>
+  <data name="sql_edit_runn" xml:space="preserve">
+    <value>SELECT        dbo.[User].LastName, dbo.[User].FirstName, dbo.Runner.Email, dbo.RegistrationStatus.RegistrationStatus
+FROM            dbo.Runner INNER JOIN
+                         dbo.Registration ON dbo.Runner.RunnerId = dbo.Registration.RunnerId INNER JOIN
+                         dbo.RegistrationStatus ON dbo.Registration.RegistrationStatusId = dbo.RegistrationStatus.RegistrationStatusId INNER JOIN
+                         dbo.[User] ON dbo.Runner.Email = dbo.[User].Email</value>
+  </data>
+  <data name="Arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bmi_healthy_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bmi-healthy-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bmi_obese_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bmi-obese-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bmi_overweight_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bmi-overweight-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bmi_underweight_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bmi-underweight-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cross_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="female_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\female-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="male_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\male-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marathon_skills_2014_certificate_seal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marathon-skills-2014-certificate-seal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marathon_skills_2014_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marathon-skills-2014-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tick_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tick-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sql_manager_a_runner" xml:space="preserve">
+    <value>SELECT        dbo.Runner.Email, dbo.[User].LastName, dbo.[User].FirstName, dbo.Runner.Gender, dbo.Runner.DateOfBirth, dbo.Country.CountryName, dbo.Charity.CharityName, dbo.Registration.Cost, dbo.RaceKitOption.RaceKitOption, 
+                         dbo.[User].IMG, dbo.RegistrationStatus.RegistrationStatusId
+FROM            dbo.Runner INNER JOIN
+                         dbo.[User] ON dbo.Runner.Email = dbo.[User].Email INNER JOIN
+                         dbo.Country ON dbo.Runner.CountryCode = dbo.Country.CountryCode INNER JOIN
+                         dbo.Marathon ON dbo.Country.CountryCode = dbo.Marathon.CountryCode INNER JOIN
+                         dbo.Registration ON dbo.Runner.RunnerId = dbo.Registration.RunnerId INNER JOIN
+                         dbo.RaceKitOption ON dbo.Registration.RaceKitOptionId = dbo.RaceKitOption.RaceKitOptionId INNER JOIN
+                         dbo.Charity ON dbo.Registration.CharityId = dbo.Charity.CharityId INNER JOIN
+                         dbo.RegistrationStatus ON dbo.Registration.RegistrationStatusId = dbo.RegistrationStatus.RegistrationStatusId INNER JOIN
+                         dbo.Event ON dbo.Marathon.MarathonId = dbo.Event.MarathonId INNER JOIN
+                         dbo.EventType ON dbo.Event.EventTypeId = dbo.EventType.EventTypeId</value>
   </data>
 </root>

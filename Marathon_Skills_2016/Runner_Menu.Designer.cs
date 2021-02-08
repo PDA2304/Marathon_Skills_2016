@@ -126,6 +126,7 @@
             this.btn_results.TabIndex = 58;
             this.btn_results.Text = "Мои результаты";
             this.btn_results.UseVisualStyleBackColor = true;
+            this.btn_results.Click += new System.EventHandler(this.btn_results_Click);
             // 
             // table_btn
             // 
@@ -158,6 +159,7 @@
             this.btn_sponsor.TabIndex = 69;
             this.btn_sponsor.Text = "Мой спонсор";
             this.btn_sponsor.UseVisualStyleBackColor = true;
+            this.btn_sponsor.Click += new System.EventHandler(this.btn_sponsor_Click);
             // 
             // btn_edit_profile
             // 

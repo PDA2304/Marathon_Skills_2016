@@ -140,6 +140,7 @@
             this.btn_results.TabIndex = 55;
             this.btn_results.Text = "Предыдущие результаты";
             this.btn_results.UseVisualStyleBackColor = true;
+            this.btn_results.Click += new System.EventHandler(this.btn_results_Click);
             // 
             // btn_bmr_calculator
             // 

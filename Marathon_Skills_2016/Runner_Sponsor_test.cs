@@ -44,13 +44,13 @@ namespace Marathon_Skills_2016
                 for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     var row = ds.Tables[0].Rows[i].ItemArray;
-                    arraylist.Add(new ComBox { name = row[1].ToString(), blag = row[2].ToString(), logo = row[3].ToString(), desription = row[4].ToString() });
+                    arraylist.Add(new ComBox { name = row[1].ToString(), blag = row[2].ToString(), logo = row[3].ToString(), desription = row[4].ToString() , email = row[5].ToString() });
                 }
 
                 cb_runner.DataSource = arraylist;
                 cb_runner.DisplayMember = "name";
                 cb_runner.ValueMember = "blag";
-
+              
             }
             catch (Exception Error)
             {
@@ -130,7 +130,7 @@ namespace Marathon_Skills_2016
                 tb_summa.Text = "0";
             }
 
-}
+        }
 
         private void btn_pay_Click(object sender, EventArgs e)
         {
@@ -150,6 +150,26 @@ namespace Marathon_Skills_2016
                 SaveDate_Sponsor_Runner.name_runner = cb_runner.SelectedItem.ToString();
                 SaveDate_Sponsor_Runner.name_blag_organization = name_fond.Text;
                 SaveDate_Sponsor_Runner.cost = Convert.ToInt32(tb_summa.Text);
+
+                var conect = new SqlConnection(connection);
+                try
+                {
+                    conect.Open();
+
+                    string sql = Properties.Resources.sql_select_Runner_Sponsor;
+                    var adapter = new SqlDataAdapter($"update Registration set  dbo.Registration.Cost = dbo.Registration.Cost + {tb_summa.Text} FROM dbo.Runner INNER JOIN dbo.Registration ON dbo.Runner.RunnerId = dbo.Registration.RunnerId WHERE(dbo.Runner.Email = N'{arraylist[cb_runner.SelectedIndex].email}')", conect);
+                    var ds = new DataSet();
+                    adapter.Fill(ds);
+
+                }
+                catch (Exception Error)
+                {
+                    MessageBox.Show(Error.Message);
+                }
+                finally
+                {
+                    conect.Close();
+                }
 
                 var form = new Sponsorship_Confirmation();
                 form.Show();
@@ -194,6 +214,7 @@ namespace Marathon_Skills_2016
         public string blag { get; set; }
         public string logo { get; set; }
         public string desription { get; set; }
+        public string email { get; set; }
     }
     public class SaveDate_Sponsor_Runner
     {

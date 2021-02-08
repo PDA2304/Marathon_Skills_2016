@@ -16,7 +16,7 @@ namespace Marathon_Skills_2016
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new start_screen());
+            Application.Run(new Manager_a_runner("d.feliciano@gmail.com"));
         }
     }
 }

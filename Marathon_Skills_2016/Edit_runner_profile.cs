@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,7 +26,7 @@ namespace Marathon_Skills_2016
         {
             Application.Exit();
         }
-
+        byte[] bt = null;
         private void Edit_runner_profile_Load(object sender, EventArgs e)
         {
             lb_email.Text = email;
@@ -67,8 +68,9 @@ namespace Marathon_Skills_2016
 
 
                 row1 = ds.Tables[0].Rows[0].ItemArray;
-
-                var bt = row1[5] as byte[];
+                tb_password.Text = row1[1].ToString();
+                tx_password2.Text = row1[1].ToString();
+                bt = row1[5] as byte[];
 
                 if (bt != null)
                 {
@@ -113,7 +115,49 @@ namespace Marathon_Skills_2016
 
         private void btn_registration_Click(object sender, EventArgs e)
         {
-            
+
+            if (tb_name.Text != "" && tb_last.Text != "" && Password() && Date())
+            {
+                byte[] byte_img = null;
+                if (tb_path_img.Text == "")
+                {
+                    byte_img = bt;
+                }
+                else
+                {
+                    byte_img = File.ReadAllBytes(tb_path_img.Text);
+                }
+
+                var conect = new SqlConnection(Properties.Resources.connection);
+                try
+                {
+
+
+                    string SQL = $" update dbo.[User] set Password = N'{tb_password.Text}', FirstName = N'{tb_last.Text}', LastName = N'{tb_name.Text}', IMG = @img where  Email = N'{email}'";
+                    string SQL1 = $"set language english update dbo.[Runner] set Gender = N'{cb_sex.SelectedItem}', DateOfBirth = CAST(N'{tb_date.Value.ToString("yyyy-MM-dd HH:mm:ss") + ".000"}' AS DateTime), CountryCode = N'{tb_country.SelectedValue}' where  Email = N'{email}'";
+
+                    conect.Open();
+
+                    var command = new SqlCommand(SQL, conect);
+                    command.Parameters.Add(new SqlParameter("@img", byte_img));
+                    command.ExecuteNonQuery();
+
+                    command = new SqlCommand(SQL1, conect);
+                    command.ExecuteNonQuery();
+
+                    var form = new Runner_Menu(email);
+                    Hide();
+                    form.Show();
+                }
+                catch (Exception er)
+                {
+                    MessageBox.Show(er.Message);
+                }
+                finally
+                {
+                    conect.Close();
+                }
+            }
         }
 
         private void calnsel_Click(object sender, EventArgs e)
@@ -129,6 +173,50 @@ namespace Marathon_Skills_2016
             var form = new start_screen();
             Hide();
             form.Show();
+        }
+
+
+        private void tb_name_Leave(object sender, EventArgs e)
+        {
+            if (((TextBox)sender).TextLength != 0)
+                (sender as TextBox).Text = (sender as TextBox).Text[0].ToString().ToUpper() + (sender as TextBox).Text.Substring(1, (sender as TextBox).Text.Length - 1).ToLower();
+        }
+
+
+        private void tb_name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            string Symbol = e.KeyChar.ToString();
+
+            if (!Regex.Match(Symbol, @"[а-яА-Я]|[a-zA-Z]").Success && !(e.KeyChar == (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        Boolean Password()
+        {
+            if ((tb_password.Text.Contains("!") || tb_password.Text.Contains("@") || tb_password.Text.Contains("#") || tb_password.Text.Contains("$") || tb_password.Text.Contains("%") || tb_password.Text.Contains("^")) && tx_password2.Text == tb_password.Text && tb_password.Text.Length >= 6 && Regex.IsMatch(tb_password.Text, @"[0-9]") && Regex.IsMatch(tb_password.Text, @"[А-ЯA-Z]"))
+            {
+                return true;
+            }
+            return false;
+        }
+        Boolean Date()
+        {
+            var DateOfBirth = tb_date.Value.AddYears(10);
+            var datenow = DateTime.Now;
+
+            if (datenow >= DateOfBirth)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            img_runner.Image = Image.FromFile(openFileDialog1.FileName);
         }
     }
 }

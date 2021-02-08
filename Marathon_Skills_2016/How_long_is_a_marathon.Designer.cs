@@ -526,7 +526,7 @@
             this.MinimumSize = new System.Drawing.Size(1450, 850);
             this.Name = "How_long_is_a_marathon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Marathon Skills 2016 - How_long_is_a_marathon";
+            this.Text = "Marathon Skills 2021 - How_long_is_a_marathon";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.How_long_is_a_marathon_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

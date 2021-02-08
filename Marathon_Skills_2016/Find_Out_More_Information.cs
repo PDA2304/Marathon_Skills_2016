@@ -60,5 +60,12 @@ namespace Marathon_Skills_2016
             var form = new About_Marathon_Skills_2021();
             form.Show();
         }
+
+        private void btn_results_Click(object sender, EventArgs e)
+        {
+            var form = new Previous_race_results();
+            form.Show();
+            Hide();
+        }
     }
 }

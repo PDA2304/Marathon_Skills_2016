@@ -45,6 +45,7 @@
             this.tb_last = new System.Windows.Forms.TextBox();
             this.tb_name = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.marathon_skills_2021 = new System.Windows.Forms.Label();
             this.btn_cansel = new System.Windows.Forms.Button();
             this.tb_password = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@
             this.password2 = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.Label();
             this.sponsor_runner = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_email = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,6 +68,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // tb_date
             // 
@@ -209,6 +210,8 @@
             this.tb_last.Name = "tb_last";
             this.tb_last.Size = new System.Drawing.Size(334, 34);
             this.tb_last.TabIndex = 79;
+            this.tb_last.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_name_KeyPress);
+            this.tb_last.Leave += new System.EventHandler(this.tb_name_Leave);
             // 
             // tb_name
             // 
@@ -218,6 +221,8 @@
             this.tb_name.Name = "tb_name";
             this.tb_name.Size = new System.Drawing.Size(334, 34);
             this.tb_name.TabIndex = 78;
+            this.tb_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_name_KeyPress);
+            this.tb_name.Leave += new System.EventHandler(this.tb_name_Leave);
             // 
             // panel1
             // 
@@ -229,6 +234,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1433, 79);
             this.panel1.TabIndex = 67;
+            // 
+            // button1
+            // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.Font = new System.Drawing.Font("Arial", 14F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.button1.Location = new System.Drawing.Point(1311, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 40);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // marathon_skills_2021
             // 
@@ -337,19 +355,6 @@
             this.sponsor_runner.TabIndex = 68;
             this.sponsor_runner.Text = "Редактирование профиля";
             this.sponsor_runner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button1
-            // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Font = new System.Drawing.Font("Arial", 14F);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.button1.Location = new System.Drawing.Point(1311, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 40);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
